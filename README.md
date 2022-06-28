@@ -25,4 +25,4 @@ This Workshop is held by:
 &nbsp;  
 &nbsp;  
 
-[![lhsystems](/img/lh_lufthansa_systems_1lin_white_RGB.png)](https://www.lhsystems.com/)
+[![lhsystems](/img/lh_lufthansa_systems_1lin_blue_RGB.png)](https://www.lhsystems.com/)

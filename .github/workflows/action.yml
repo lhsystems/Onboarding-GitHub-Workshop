@@ -6,6 +6,8 @@ jobs:
   Markdown-Linter:
     runs-on: ubuntu-latest
     steps:
+    - name: Check out code
+      uses: actions/checkout@v2
     - name: markdownlint-cli
       uses: avto-dev/markdown-lint@v1
       with:

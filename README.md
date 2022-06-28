@@ -16,9 +16,7 @@ branches instead.</p>
 3. Create a **GitHub Actions Workflow** in your repository.
 It should be triggered everytime there is a change to a
 **Pull Request** and run a linter to check the **Markdown** Code.
-You can find a default config
-[here](https://github.com/DavidAnson/markdownlint/
-blob/main/schema/.markdownlint.yaml) \
+You can take the .markdownlint.yml from this repo. \
 Edit the branch protection to only allow merges when
 the lint has been successful.</p>
 4. Create a simple document using **Markdown**. A short

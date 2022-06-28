@@ -7,10 +7,9 @@ This repository shows an example solutions to the tasks of the Lufthansa Systems
 1. Create a **public** GitHub repository. You can simply use your existing GitHub account or you can create a new one for free [here](https://github.com/signup). </p>
 Make sure it is a **public** repository in order to make sure we have all needed feaures available</p>
 2. Create a **rule** in your repository that prevents anybody from pushing directly to the main branch. Use seperate development branches instead.</p>
-3. Create another **rule** that pull requests can only be merged when a Markdown syntax check has been successful</p>
+3. Create a **GitHub Actions Workflow** in your repository. It should be triggered everytime there is a change to a **Pull Request** and run a linter to check the **Markdown** Code.</p>
 4. Create a simple document using **Markdown**. A short introduction to Markdown can be found [here](https://www.markdownguide.org/basic-syntax/). If you want you can also create multiple files and subfolder. Just be creative :).</p>
-5. Create a **GitHub Actions Workflow** in your repository. It should be triggered everytime there is a new push to the **main** branch.</p>
-6. In the newly created **Workflow**, use **[Jekyll](https://jekyllrb.com/docs/continuous-integration/github-actions/)** to create a static web page using your Markdown-Files.</p>
+6. In the your **Workflow**, use **[Jekyll](https://jekyllrb.com/docs/continuous-integration/github-actions/)** to create a static web page using your Markdown-Files everytime there is a push on the main branch.</p>
 7. Publish the generated website to **GitHub Pages**</p>
 8. Package your website in a **.zip** and publish it to **GitHub Packages** so that other users can download the .zip. This should be done automatically everytime you create a new **Tag** in your repository</p>
     ### **Bonus Task :top::**

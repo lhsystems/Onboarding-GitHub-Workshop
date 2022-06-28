@@ -1,4 +1,5 @@
-# ITCS-HAM-Demo
+# Lufthansa Systems ITCS Hamburg Workshop
+
 This repository shows an example solutions to the tasks of the Lufthansa Systems Workshop at the ITCS Hamburg
 
 ## Tasks :rocket:

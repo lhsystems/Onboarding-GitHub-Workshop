@@ -109,7 +109,7 @@ MD022:
   lines_below: 1
 
 # MD023/heading-start-left/header-start-left - Headings must start at the beginning of the line
-MD023: true
+MD023: false
 
 # MD024/no-duplicate-heading/no-duplicate-header - Multiple headings with the same content
 MD024:

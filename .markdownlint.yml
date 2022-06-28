@@ -109,7 +109,7 @@ MD022:
   lines_below: 1
 
 # MD023/heading-start-left/header-start-left - Headings must start at the beginning of the line
-MD023: true
+MD023: false
 
 # MD024/no-duplicate-heading/no-duplicate-header - Multiple headings with the same content
 MD024:
@@ -128,7 +128,7 @@ MD025:
 # MD026/no-trailing-punctuation - Trailing punctuation in heading
 MD026:
   # Punctuation characters
-  punctuation: ".,;:!。，；：！"
+  punctuation: ".,;!。，；：！"
 
 # MD027/no-multiple-space-blockquote - Multiple spaces after blockquote symbol
 MD027: true
@@ -201,11 +201,7 @@ MD041:
 MD042: true
 
 # MD043/required-headings/required-headers - Required heading structure
-MD043:
-  # List of headings
-  headings: []
-  # List of headings
-  headers: []
+MD043: false
 
 # MD044/proper-names - Proper names should have the correct capitalization
 MD044:

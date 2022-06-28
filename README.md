@@ -1,7 +1,7 @@
 # ITCS-HAM-Demo
 This repository shows an example solutions to the tasks of the Lufthansa Systems Workshop at the ITCS Hamburg
 
-## Tasks
+## Tasks :rocket:
 
 1. Create a **public** GitHub repository. You can simply use your existing GitHub account or you can create a new one for free [here](https://github.com/signup). </p>
 Make sure it is a **public** repository in order to make sure we have all needed feaures available</p>
@@ -12,10 +12,10 @@ Make sure it is a **public** repository in order to make sure we have all needed
 6. In the newly created **Workflow**, use **[Jekyll](https://jekyllrb.com/docs/continuous-integration/github-actions/)** to create a static web page using your Markdown-Files.</p>
 7. Publish the generated website to **GitHub Pages**</p>
 8. Package your website in a **.zip** and publish it to **GitHub Packages** so that other users can download the .zip. This should be done automatically everytime you create a new **Tag** in your repository</p>
-    ### **Bonus Task:**
+    ### **Bonus Task:** :top:
     Configure your **Workflow** to deploy an **INT**-Version of your webpage to the **Azure Blob Store** every time a pull request is opened. *Please contact us on how to use the Azure Blob Store*
 
-## Contact
+## Contact :phone:
 
 This Workshop is held by:
 

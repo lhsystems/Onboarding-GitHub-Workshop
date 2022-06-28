@@ -1,6 +1,6 @@
 # Lufthansa Systems ITCS Hamburg Workshop
 
-This repository shows an example solutions to the tasks of the 
+This repository shows an example solutions to the tasks of the
 Lufthansa Systems Workshop at the ITCS Hamburg
 
 ## Tasks :rocket:
@@ -17,7 +17,8 @@ branches instead.</p>
 It should be triggered everytime there is a change to a
 **Pull Request** and run a linter to check the **Markdown** Code.
 You can find a default config
-[here](https://github.com/DavidAnson/markdownlint/blob/main/schema/.markdownlint.yaml) \
+[here](https://github.com/DavidAnson/markdownlint/
+blob/main/schema/.markdownlint.yaml) \
 Edit the branch protection to only allow merges when
 the lint has been successful.</p>
 4. Create a simple document using **Markdown**. A short
@@ -35,8 +36,8 @@ there is a push on the main branch.</p>
 This should be done automatically everytime you create a new
 **Tag** in your repository</p>
 
-    ### **Bonus Task :top:\:**
-    
+    ### Bonus Task :top:
+
     Configure your **Workflow** to deploy an **INT**-Version of your
     webpage to the **Azure Blob Store** every time a pull request is
     opened. *Please contact us on how to use the Azure Blob Store*

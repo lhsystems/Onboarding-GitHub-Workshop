@@ -3,7 +3,7 @@ on:
   pull_request
 
 jobs: 
-  test:
+  Markdown Linter:
     runs-on: ubuntu-latest
     steps:
     - name: markdownlint-cli

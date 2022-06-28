@@ -1,0 +1,12 @@
+name: Demo Workflow
+on: 
+  pull_request
+
+jobs: 
+  Markdown-Linter:
+    runs-on: ubuntu-latest
+    steps:
+    - name: markdownlint-cli
+      uses: nosborn/github-action-markdown-cli@v3.0.1
+      with:
+        files: .

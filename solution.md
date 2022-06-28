@@ -1,6 +1,7 @@
 # Example Solution
 
-In this file you will find an example solution to the tasks. There might be other solutions as well
+In this file you will find an example solution to the tasks.
+There might be other solutions as well
 
 ## Task 1: Create a Repository
 
@@ -25,23 +26,21 @@ Make sure to create a public repository.
 2. Create a folder `.github/workflows`
 3. Create a .yml with a name of your choice
 4. paste the following content:
-```
-name: Demo Workflow
-on: 
-  pull_request
+        name: Demo Workflow
+        on: 
+        pull_request
 
-jobs: 
-  Markdown-Linter:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Check out code
-      uses: actions/checkout@v2
-    - name: markdownlint-cli
-      uses: avto-dev/markdown-lint@v1
-      with:
-        args: '.'
-        config: '.markdownlint.yml'
-```
+        jobs: 
+        Markdown-Linter:
+            runs-on: ubuntu-latest
+            steps:
+            - name: Check out code
+            uses: actions/checkout@v2
+            - name: markdownlint-cli
+            uses: avto-dev/markdown-lint@v1
+            with:
+                args: '.'
+                config: '.markdownlint.yml'
 5. paste the file `.markdownlint.yml` into your main folder
 6. go to your newly created Branch protection rule and edit it
 7. Select "Require status checks to pass before merging" and search

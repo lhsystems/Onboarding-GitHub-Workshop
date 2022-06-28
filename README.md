@@ -5,7 +5,7 @@ This repository shows an example solutions to the tasks of the Lufthansa Systems
 ## Tasks :rocket:
 
 1. Create a **public** GitHub repository. You can simply use your existing GitHub account or you can create a new one for free [here](https://github.com/signup). </p>
-Make sure it is a **public** repository in order to make sure we have all needed feaures available</p>
+Make sure it is a **public** repository in order to make sure we have all needed features available</p>
 2. Create a **rule** in your repository that prevents anybody from pushing directly to the main branch. Use seperate development branches instead.</p>
 3. Create a **GitHub Actions Workflow** in your repository. It should be triggered everytime there is a change to a **Pull Request** and run a linter to check the **Markdown** Code. \
 Edit the branch protection to only allow merges when the lint has been successful.</p>

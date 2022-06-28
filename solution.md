@@ -16,7 +16,7 @@ Make sure to create a public repository.
 2. Go to the "Settings" Tab
 3. Select "Branches"
 4. In the Section "Branch protection rules" click "Add rule"
-5. In the "Branch name pattern" add `main` and select 
+5. In the "Branch name pattern" add `main` and select
 "Require a pull request before merging" but not
 "Require approvals"
 
@@ -27,7 +27,7 @@ Make sure to create a public repository.
 3. Create a .yml with a name of your choice
 4. paste the following content:
         name: Demo Workflow
-        on: 
+        on:
         pull_request
 
         jobs: 

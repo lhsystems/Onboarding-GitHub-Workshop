@@ -12,7 +12,7 @@ Make sure it is a **public** repository in order to make sure we have all needed
 6. In the newly created **Workflow**, use **[Jekyll](https://jekyllrb.com/docs/continuous-integration/github-actions/)** to create a static web page using your Markdown-Files.</p>
 7. Publish the generated website to **GitHub Pages**</p>
 8. Package your website in a **.zip** and publish it to **GitHub Packages** so that other users can download the .zip. This should be done automatically everytime you create a new **Tag** in your repository</p>
-    ### **Bonus Task:** :top:
+    ### **Bonus Task :top::**
     Configure your **Workflow** to deploy an **INT**-Version of your webpage to the **Azure Blob Store** every time a pull request is opened. *Please contact us on how to use the Azure Blob Store*
 
 ## Contact :phone:

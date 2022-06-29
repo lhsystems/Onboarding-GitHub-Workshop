@@ -14,3 +14,7 @@ jobs:
         uses: TheDoctor0/zip-release@0.6.2
         with:
           path: './_site/'
+      - uses: actions/upload-artifact@v3
+        with:
+          name: jekyll website
+          path: './site/release.zip'

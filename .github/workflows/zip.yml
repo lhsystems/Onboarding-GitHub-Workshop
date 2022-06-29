@@ -1,20 +1,23 @@
 name: Build and zip Jekyll and publish it to GitHub packages
 
 on:
-  push
+  push:
+    tags
 
 jobs:
   publish-zip:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Ckechout git repo
+        uses: actions/checkout@v2
       - name: Build
         uses: jerryjvl/jekyll-build-action@v1
-      - name: Zip Release
+      - name: Create .zip File
         uses: TheDoctor0/zip-release@0.6.2
         with:
           path: './_site/'
-      - uses: actions/upload-artifact@v3
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
         with:
           name: jekyll website
           path: 'release.zip'

@@ -90,8 +90,12 @@ following content:
                 with:                        
                 token: ${{ secrets.GITHUB_TOKEN }}
 4. Create a Pull Request and merge the changes
-5. After a successful run go to the "Settings" Tab
-6. Select "Pages"
-7. At "Source" select Branch: `gh-pages` and Save.
-8. After the now triggered Actions workflow the page will be available at the shown
+
+## Task 6
+
+1. After a successful run of the previously created workflow
+go to the "Settings" Tab
+2. Select "Pages"
+3. At "Source" select Branch: `gh-pages` and Save.
+4. After the now triggered Actions workflow the page will be available at the shown
 link

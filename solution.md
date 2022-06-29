@@ -99,3 +99,38 @@ go to the "Settings" Tab
 3. At "Source" select Branch: `gh-pages` and Save.
 4. After the now triggered Actions workflow the page will be available at the shown
 link
+
+## Task 7
+
+1. Create another workflow file in your `.github/workflows` directory
+2. add the following content:
+
+        name: Build and zip Jekyll and publish it to GitHub packages
+
+        on:
+        push:
+            tags:
+            - '*'
+
+        jobs:
+        publish-zip:
+            runs-on: ubuntu-latest
+            steps:
+            - name: Ckechout git repo
+                uses: actions/checkout@v2
+            - name: Build
+                uses: jerryjvl/jekyll-build-action@v1
+            - name: Create .zip File
+                uses: TheDoctor0/zip-release@0.6.2
+                with:
+                path: './_site/*'
+            - name: Upload Artifact
+                uses: ncipollo/release-action@v1
+                with:
+                artifacts: "release.zip"
+                token: ${{ secrets.GITHUB_TOKEN }}
+
+3. Create a tag using the following commands:
+
+        git tag -a v1.0
+        git push origin v1.0

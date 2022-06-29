@@ -17,4 +17,4 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: jekyll website
-          path: './site/release.zip'
+          path: 'release.zip'

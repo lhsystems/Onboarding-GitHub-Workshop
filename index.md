@@ -1,4 +1,6 @@
 ---
+title: My First Page
+layout: default
 ---
 
-Welcome to My Home Page
+Hello World!

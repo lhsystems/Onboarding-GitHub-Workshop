@@ -26,6 +26,7 @@ Make sure to create a public repository.
 2. Create a folder `.github/workflows`
 3. Create a .yml with a name of your choice
 4. paste the following content:
+
         name: Demo Workflow
         on:
         pull_request
@@ -48,4 +49,49 @@ for the job name
 
 ## Task 4: Create a markdown file
 
-1. Simply create a .md file with the content of your choice
+1. Simply create an index.md file with the content of your choice
+
+## Task 5: Create a static web page
+
+1. Add the following lines to your created `.md` file:
+
+        ---
+        title: My First Page
+        layout: default
+        ---
+    You can modify the title and layout if you want
+2. Create a `Gemfile` with the following content:
+
+        # Gemfile
+        source 'https://rubygems.org'
+        gem 'jekyll', '~> 4.2'
+3. Create a new workflow `.yml` in your `.github/workflows` folder with the
+following content:
+
+        name: Build and deploy Jekyll site to GitHub Pages
+
+        on:
+        push:
+            branches:
+            - main
+
+        jobs:
+        github-pages:
+            runs-on: ubuntu-latest
+            steps:
+            - uses: actions/checkout@v2
+            - uses: actions/cache@v2
+                with:
+                path: vendor/bundle
+                key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+                restore-keys: |
+                    ${{ runner.os }}-gems-
+            - uses: helaili/jekyll-action@v2
+                with:                        
+                token: ${{ secrets.GITHUB_TOKEN }}
+4. Create a Pull Request and merge the changes
+5. After a successful run go to the "Settings" Tab
+6. Select "Pages"
+7. At "Source" select Branch: `gh-pages` and Save.
+8. After the now triggered Actions workflow the page will be available at the shown
+link

@@ -2,7 +2,8 @@ name: Build and zip Jekyll and publish it to GitHub packages
 
 on:
   push:
-    tags
+    tags:
+      - '*'
 
 jobs:
   publish-zip:

@@ -18,7 +18,7 @@ jobs:
         with:
           path: './_site/'
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: ncipollo/release-action@v1
         with:
-          name: jekyll website
-          path: 'release.zip'
+          artifacts: "release.zip"
+          token: ${{ secrets.GITHUB_TOKEN }}

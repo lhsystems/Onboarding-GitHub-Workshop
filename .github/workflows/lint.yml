@@ -20,6 +20,8 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v2
+    - name: Build
+      uses: jerryjvl/jekyll-build-action@v1
     - name: Login to Azure
       uses: azure/login@v1
       with:
@@ -28,7 +30,8 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          az storage blob upload-batch --account-name itcshamdemo  --auth-mode key -d '$web' -s .
+          cd _site \
+          az storage blob upload-batch --account-name itcshamdemo -d '$web' -s .
     - name: Logout from Azure
       run: |
             az logout

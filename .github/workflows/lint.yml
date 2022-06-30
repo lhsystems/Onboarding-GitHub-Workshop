@@ -1,4 +1,4 @@
-name: Lint Workflow
+name: Pull Request Workflow
 on: 
   pull_request
 
@@ -13,3 +13,24 @@ jobs:
       with:
         args: '.'
         config: '.markdownlint.yml'
+
+jobs:
+  Deploy-Azure:
+    needs: Markdown-Linter
+    runs-on: ubuntu-latest
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_BLOB_SECRET }}
+    - name: Upload to blob storage
+      uses: azure/CLI@v1
+      with:
+        inlineScript: |
+          az storage blob upload-batch --account-name itcshamdemo  --auth-mode key -d '$web' -s .
+    - name: Logout from Azure
+      run: |
+            az logout
+      if: always()

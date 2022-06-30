@@ -1,8 +1,3 @@
----
-title: Lufthansa Systems ITCS Hamburg Tasks
-layout: default
----
-
 # Lufthansa Systems ITCS Hamburg Workshop
 
 This repository shows an example solutions to the tasks of the

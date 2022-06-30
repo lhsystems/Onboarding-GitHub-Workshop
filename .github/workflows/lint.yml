@@ -26,5 +26,4 @@ jobs:
       uses: azure/CLI@v1
       with:
         inlineScript: |
-          cd _site \
           az storage blob upload-batch --account-name itcshamdemo --auth-mode key --account-key ${{ secrets.AZURE_BLOB_SECRET }} -d '$web' -s ./_site

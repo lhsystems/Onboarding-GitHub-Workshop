@@ -134,3 +134,23 @@ link
 
         git tag -a v1.0
         git push origin v1.0
+
+## Bonus Task
+1. Add the Account-Key provided by us as an Action-Secret in GitHub
+2. Expand the `lint.yml` workflow with an additional job with the following content:
+
+          Deploy-Azure:
+            needs: Markdown-Linter
+            runs-on: ubuntu-latest
+            steps:
+            - name: Check out code
+            uses: actions/checkout@v2
+            - name: Build
+            uses: jerryjvl/jekyll-build-action@v1
+            - name: Upload to blob storage
+            uses: azure/CLI@v1
+            with:
+                inlineScript: |
+                az storage blob upload-batch --account-name <STORAGE ACCOUNT> --auth-mode key --account-key ${{ secrets.AZURE_BLOB_SECRET }} -d '$web' -s ./_site
+
+3. Create a Pull Request

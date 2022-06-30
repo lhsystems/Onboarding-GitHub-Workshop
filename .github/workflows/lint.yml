@@ -14,7 +14,6 @@ jobs:
         args: '.'
         config: '.markdownlint.yml'
 
-jobs:
   Deploy-Azure:
     needs: Markdown-Linter
     runs-on: ubuntu-latest

@@ -22,17 +22,9 @@ jobs:
       uses: actions/checkout@v2
     - name: Build
       uses: jerryjvl/jekyll-build-action@v1
-    - name: Login to Azure
-      uses: azure/login@v1
-      with:
-        creds: ${{ secrets.AZURE_BLOB_SECRET }}
     - name: Upload to blob storage
       uses: azure/CLI@v1
       with:
         inlineScript: |
           cd _site \
-          az storage blob upload-batch --account-name itcshamdemo -d '$web' -s .
-    - name: Logout from Azure
-      run: |
-            az logout
-      if: always()
+          az storage blob upload-batch --account-name itcshamdemo --auth-mode key --account-key ${{ secrets.AZURE_BLOB_SECRET }} -d '$web' -s ./_site

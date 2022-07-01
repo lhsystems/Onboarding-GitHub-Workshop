@@ -19,7 +19,7 @@ It should be triggered everytime there is a change to a
 You can take the .markdownlint.yml from this repo. \
 Edit the branch protection to only allow merges when
 the lint has been successful.</p>
-4. Create a simple document using **Markdown**. A short
+4. Create a simple `index.md` using **Markdown**. A short
 introduction to Markdown can be found
 [here](https://www.markdownguide.org/basic-syntax/).
 If you want you can also create multiple files and subfolder.

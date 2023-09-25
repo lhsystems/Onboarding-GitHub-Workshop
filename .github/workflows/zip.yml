@@ -10,11 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ckechout git repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Build
         uses: jerryjvl/jekyll-build-action@v1
       - name: Create .zip File
-        uses: TheDoctor0/zip-release@0.6.2
+        uses: TheDoctor0/zip-release@0.7.1
         with:
           path: './_site/*'
       - name: Upload Artifact

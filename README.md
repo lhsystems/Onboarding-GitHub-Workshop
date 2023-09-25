@@ -1,4 +1,4 @@
-# Lufthansa Systems ITCS Hamburg Workshop
+# Lufthansa Systems Dualis Onboarding GitHub Workshop
 
 This repository shows an example solutions to the tasks of the
 Lufthansa Systems Workshop at the ITCS Hamburg
@@ -44,7 +44,6 @@ This should be done automatically everytime you create a new
 
 This Workshop is held by\:
 
-* [Steffen Wagner](https://github.com/wagnst)
 * [Benedikt Funke](https://github.com/benfu99/)
 
 &nbsp;  

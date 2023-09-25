@@ -8,6 +8,10 @@ on:
 jobs:
   publish-zip:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      deployments: write
+      packages: write
     steps:
       - name: Ckechout git repo
         uses: actions/checkout@v4

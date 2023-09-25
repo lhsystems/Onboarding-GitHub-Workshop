@@ -36,7 +36,7 @@ Make sure to create a public repository.
             runs-on: ubuntu-latest
             steps:
             - name: Check out code
-            uses: actions/checkout@v2
+            uses: actions/checkout@v4
             - name: markdownlint-cli
             uses: avto-dev/markdown-lint@v1
             with:
@@ -65,31 +65,10 @@ for the job name
         # Gemfile
         source 'https://rubygems.org'
         gem 'jekyll', '~> 4.2'
-3. Create a new workflow `.yml` in your `.github/workflows` folder with the
-following content:
-
-        name: Build and deploy Jekyll site to GitHub Pages
-
-        on:
-        push:
-            branches:
-            - main
-
-        jobs:
-        github-pages:
-            runs-on: ubuntu-latest
-            steps:
-            - uses: actions/checkout@v2
-            - uses: actions/cache@v2
-                with:
-                path: vendor/bundle
-                key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-                restore-keys: |
-                    ${{ runner.os }}-gems-
-            - uses: helaili/jekyll-action@v2
-                with:                        
-                token: ${{ secrets.GITHUB_TOKEN }}
-4. Create a Pull Request and merge the changes
+3. Browse to your Repository Settings and Select 'Pages'
+4. At 'Build and Deployment' select the Source 'GitHub Actions'
+5. Create a workflow based on the recommendation
+6. Create a Pull Request and merge the changes
 
 ## Task 6
 
@@ -117,11 +96,11 @@ link
             runs-on: ubuntu-latest
             steps:
             - name: Ckechout git repo
-                uses: actions/checkout@v2
+                uses: actions/checkout@v4
             - name: Build
                 uses: jerryjvl/jekyll-build-action@v1
             - name: Create .zip File
-                uses: TheDoctor0/zip-release@0.6.2
+                uses: TheDoctor0/zip-release@0.7.1
                 with:
                 path: './_site/*'
             - name: Upload Artifact
@@ -145,7 +124,7 @@ link
             runs-on: ubuntu-latest
             steps:
             - name: Check out code
-            uses: actions/checkout@v2
+            uses: actions/checkout@v4
             - name: Build
             uses: jerryjvl/jekyll-build-action@v1
             - name: Upload to blob storage
